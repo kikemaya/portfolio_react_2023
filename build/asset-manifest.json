@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/portfolio_react_2023/static/css/main.1004cb69.css",
+    "main.js": "/portfolio_react_2023/static/js/main.16e293d0.js",
+    "static/media/nhero.jpg": "/portfolio_react_2023/static/media/nhero.182b2922177e43cf5133.jpg",
+    "static/media/banner-man2.png": "/portfolio_react_2023/static/media/banner-man2.60054a8b7bfa351bb0f3.png",
+    "static/media/mongo.png": "/portfolio_react_2023/static/media/mongo.b473c1c113167cdfe8b6.png",
+    "static/media/portfolio.svg": "/portfolio_react_2023/static/media/portfolio.2f31f4be113e35cc3442.svg",
+    "static/media/contact.svg": "/portfolio_react_2023/static/media/contact.ec60abf53c38c2593f7e.svg",
+    "static/media/about.svg": "/portfolio_react_2023/static/media/about.70a8290c961c47c208b5.svg",
+    "index.html": "/portfolio_react_2023/index.html",
+    "main.1004cb69.css.map": "/portfolio_react_2023/static/css/main.1004cb69.css.map",
+    "main.16e293d0.js.map": "/portfolio_react_2023/static/js/main.16e293d0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1004cb69.css",
+    "static/js/main.16e293d0.js"
+  ]
+}
