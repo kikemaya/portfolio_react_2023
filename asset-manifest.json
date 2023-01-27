@@ -1,7 +1,9 @@
 {
   "files": {
     "main.css": "/portfolio_react_2023/static/css/main.1004cb69.css",
-    "main.js": "/portfolio_react_2023/static/js/main.16e293d0.js",
+    "main.js": "/portfolio_react_2023/static/js/main.d4b973b1.js",
+    "static/media/Frontend-CV-Enrique-Maya-Español.pdf": "/portfolio_react_2023/static/media/Frontend-CV-Enrique-Maya-Español.3885bd6b5d84cde05061.pdf",
+    "static/media/Frontend-CV-Enrique-Maya-English.pdf": "/portfolio_react_2023/static/media/Frontend-CV-Enrique-Maya-English.a6df5f98b22965b5c1e2.pdf",
     "static/media/nhero.jpg": "/portfolio_react_2023/static/media/nhero.182b2922177e43cf5133.jpg",
     "static/media/banner-man2.png": "/portfolio_react_2023/static/media/banner-man2.60054a8b7bfa351bb0f3.png",
     "static/media/mongo.png": "/portfolio_react_2023/static/media/mongo.b473c1c113167cdfe8b6.png",
@@ -10,10 +12,10 @@
     "static/media/about.svg": "/portfolio_react_2023/static/media/about.70a8290c961c47c208b5.svg",
     "index.html": "/portfolio_react_2023/index.html",
     "main.1004cb69.css.map": "/portfolio_react_2023/static/css/main.1004cb69.css.map",
-    "main.16e293d0.js.map": "/portfolio_react_2023/static/js/main.16e293d0.js.map"
+    "main.d4b973b1.js.map": "/portfolio_react_2023/static/js/main.d4b973b1.js.map"
   },
   "entrypoints": [
     "static/css/main.1004cb69.css",
-    "static/js/main.16e293d0.js"
+    "static/js/main.d4b973b1.js"
   ]
 }
