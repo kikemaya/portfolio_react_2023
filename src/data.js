@@ -139,14 +139,14 @@ export const skills = [
 export const contact = [
   {
     icon: <FiMail />,
-    title: "Have any question?",
+    title: "Do you have any questions?",
     subtitle: "I am here to help you.",
     description: "Email me with the form or by social media, please.",
   },
   {
     icon: <FiMapPin />,
     title: "Current Location",
-    subtitle: "Mexico City, Mexico",
-    description: "Working from home(:",
+    subtitle: "Mexico City, Mexico.",
+    description: "Working from 🏠.",
   },
 ];

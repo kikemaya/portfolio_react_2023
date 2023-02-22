@@ -15,15 +15,15 @@ const Hero = () => {
         <div className="flex items-center h-full">
           <div className="flex-1 flex flex-col items-center lg:items-start h-3/4 justify-end">
             <p className="text-2xl text-accent  mb-[22px]">
-              Hey, I'm Enrique! 🙌
+              Hey, I'm Enrique! 👨🏽‍💻🙌
             </p>
             <h1 className="text-4xl leading-[44px] md:text-5xl md:leading-tight lg:text-5xl lg:leading-[1.2] font-bold md:tracking-[-2px] text-center lg:text-left">
-              Frontend
+              Front end
               <br /> Web Developer.
             </h1>
             <p className="pt-4 pb-8 md:pt-6 md:pb-12 max-w-[480px] text-lg text-center lg:text-left">
-              Also a very proud and a happy teacher. I really enjoy to connect
-              with people and help them. So...
+              Also a very proud and a happy teacher. I really enjoy connecting
+              with people and helping them. So...
             </p>
             <Link
               className="btn btn-md
