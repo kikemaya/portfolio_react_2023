@@ -6,7 +6,7 @@ import Image from "./../../assets/img/nhero.jpg";
 
 const About = () => {
   return (
-    <section className="section bg-secondary" id="about">
+    <section className="section bg-secondary bg-hero-pattern" id="about">
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-24">
           <img

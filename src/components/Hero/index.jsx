@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="lg:h-[100vh] flex items-center bg-primary lg:bg-cover lg:bg-center lg:bg-no-repeat py-32 lg:py-0 overflow-hidden"
+      className="lg:h-[100vh] flex items-center bg-primary lg:bg-cover lg:bg-center lg:bg-no-repeat py-32 lg:py-0 overflow-hidden bg-hero-pattern"
     >
       <div className="container mx-auto h-full">
         <div className="flex items-center h-full">
@@ -22,7 +22,7 @@ const Hero = () => {
               <br /> Web Developer.
             </h1>
             <p className="pt-4 pb-8 md:pt-6 md:pb-12 max-w-[480px] text-lg text-center lg:text-left">
-              Also a very proud and a happy teacher. I really enjoy connecting
+              Also a very proud and happy teacher. I really enjoy connecting
               with people and helping them. So...
             </p>
             <Link

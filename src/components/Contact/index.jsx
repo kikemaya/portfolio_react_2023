@@ -49,7 +49,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="section bg-primary" id="contact">
+    <section className="section bg-primary bg-hero-pattern" id="contact">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center">
           <h2 className="mb-12 section-title before:content-contact relative before:absolute before:opacity-40 before:-top-7 before:-left-40 before:hidden before:lg:block">

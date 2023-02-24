@@ -65,7 +65,7 @@ const NavMobile = () => {
         variants={circleVariants}
         initial="hidden"
         animate={isOpen ? "visible" : "hidden"}
-        className="w-4 h-4 rounded-full bg-accent fixed top-0 right-0"
+        className="w-4 h-4 rounded-full bg-primary bg-hero-pattern fixed top-0 right-0"
       ></motion.div>
 
       <motion.ul
