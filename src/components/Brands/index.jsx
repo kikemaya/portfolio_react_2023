@@ -10,7 +10,9 @@ const Brands = () => {
         {brands.map((brand, idx) => {
           return (
             <div key={idx} className="mx-8 my-4 md:my-auto">
-              <img src={brand.img} alt="" />
+              <a href={brand.href} target="_blank">
+                <img src={brand.img} alt={brand.alt} className="h-10" />
+              </a>
             </div>
           );
         })}

@@ -3,12 +3,6 @@ import React from "react";
 // import navigation data
 import { navigation } from "../../data";
 
-// import English cv pdf
-import cvPdfEn from "./../../assets/documents/Frontend-CV-Enrique-Maya-English.pdf";
-
-// import Spanish cv pdf
-import cvPdfEs from "./../../assets/documents/Frontend-CV-Enrique-Maya-Español.pdf";
-
 // import Link
 import { Link } from "react-scroll";
 
@@ -39,16 +33,6 @@ const Nav = () => {
           );
         })}
         {/* <LinkRouter to="/blog">Blog</LinkRouter> */}
-        <li>
-          <a href={cvPdfEn} download>
-            EN-CV
-          </a>
-        </li>
-        <li>
-          <a href={cvPdfEs} download>
-            ES-CV
-          </a>
-        </li>
       </ul>
     </nav>
   );

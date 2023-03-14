@@ -4,6 +4,7 @@ import { FiLinkedin, FiGithub, FiMail, FiMapPin } from "react-icons/fi";
 // companies icons
 import AcatlanIcon from "./assets/img/brands/acatlan.png";
 import DevF from "./assets/img/brands/devf.png";
+import Epam from "./assets/img/brands/epam.svg";
 
 // projects images
 // import Project1 from './assets/img/projects/p1.webp';
@@ -59,11 +60,18 @@ export const social = [
 export const brands = [
   {
     img: AcatlanIcon,
-    href: "",
+    href: "https://www.acatlan.unam.mx/index.php?id=13",
+    alt: "Fes Acatlan logo",
   },
   {
     img: DevF,
-    href: "",
+    href: "https://www.devf.la/",
+    alt: "DEV.F logo",
+  },
+  {
+    img: Epam,
+    href: "https://www.epam.com/",
+    alt: "EPAM Systems logo",
   },
 ];
 

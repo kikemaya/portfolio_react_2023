@@ -7,12 +7,6 @@ import { MenuAlt3Icon } from "@heroicons/react/outline";
 // import navigation data
 import { navigation } from "../../data";
 
-// import English cv pdf
-import cvPdfEn from "./../../assets/documents/Frontend-CV-Enrique-Maya-English.pdf";
-
-// import Spanish cv pdf
-import cvPdfEs from "./../../assets/documents/Frontend-CV-Enrique-Maya-Español.pdf";
-
 // import components
 import Socials from "../Socials";
 
@@ -100,16 +94,6 @@ const NavMobile = () => {
         {/* <LinkRouter to="/blog" className="text-xl cursor-pointer capitalize">
           Blog
         </LinkRouter> */}
-        <li className="mb-8">
-          <a href={cvPdfEn} download>
-            EN-CV
-          </a>
-        </li>
-        <li className="mb-8">
-          <a href={cvPdfEs} download>
-            ES-CV
-          </a>
-        </li>
         <Socials />
       </motion.ul>
     </nav>
