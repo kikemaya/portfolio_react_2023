@@ -7,21 +7,27 @@ import "./index.css";
 
 import App from "./App";
 
-// import Login from "./components/Login";
+import Login from "./pages/Login";
+import AdminPanel from "./pages/AdminPanel";
 import Error404 from "./components/ErrorPages";
 import Error418 from "./components/ErrorPages/Error418";
+import { AuthProvider } from "./contexts/AuthContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      {/* <HashRouter> */}
-      <Routes>
-        <Route path="*" element={<Error404 />} />
-        <Route path="portfolio_react_2023" element={<App />} />
-        <Route path="portfolio_react_2023/coffe" element={<Error418 />} />
-      </Routes>
-      {/* </HashRouter> */}
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        {/* <HashRouter> */}
+        <Routes>
+          <Route path="*" element={<Error404 />} />
+          <Route path="portfolio_react_2023" element={<App />} />
+          <Route path="portfolio_react_2023/coffe" element={<Error418 />} />
+          <Route path="portfolio_react_2023/login" element={<Login />} />
+          <Route path="portfolio_react_2023/admin" element={<AdminPanel />} />
+        </Routes>
+        {/* </HashRouter> */}
+      </BrowserRouter>
+    </AuthProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
