@@ -1,36 +1,36 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { auth } from '../firebase/firebaseConfig';
-import { onAuthStateChanged } from 'firebase/auth';
+import React, { useContext, useEffect, useState } from "react";
+import { auth } from "../firebase/firebaseConfig";
+import { onAuthStateChanged } from "firebase/auth";
 
-const AuthContext = React.createContext()
+const AuthContext = React.createContext();
 
 // Hook to access the context
 const useAuth = () => {
-  return useContext(AuthContext)
-}
+  return useContext(AuthContext);
+};
 
 const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(true)
+  const [user, setUser] = useState(true);
 
   // creamos un state para saber cuando termina de
   // cargar la comprobacion de onAuthStateChanged
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Validate if there's a user
+    // Validar si hay un usuario
     const cancelSub = onAuthStateChanged(auth, (user) => {
-      setUser(user)
-      setLoading(false)
-    })
+      setUser(user);
+      setLoading(false);
+    });
 
-    return cancelSub
-  }, [])
+    return cancelSub;
+  }, []);
 
   return (
-    <AuthContext.Provider value={{ usuario: user }}>
+    <AuthContext.Provider value={{ userAuth: user }}>
       {!loading && children}
     </AuthContext.Provider>
-  )
-}
+  );
+};
 
-export { AuthProvider, AuthContext, useAuth }
+export { AuthProvider, AuthContext, useAuth };
