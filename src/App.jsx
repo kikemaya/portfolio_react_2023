@@ -9,6 +9,7 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import BackTopBtn from "./components/BackTopBtn";
+import Blog from "./components/Blog";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Brands />
       <About />
       <Skills />
+      <Blog />
       {/* <Portfolio /> */}
       <Contact />
       <Footer />

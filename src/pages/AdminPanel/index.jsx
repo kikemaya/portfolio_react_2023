@@ -4,8 +4,11 @@ import { useNavigate } from "react-router-dom";
 import { auth, db, storage } from "./../../firebase/firebaseConfig";
 import { signOut } from "firebase/auth";
 
-import { doc, setDoc } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 import { ref, uploadBytes } from "firebase/storage";
+
+import { v4 } from 'uuid'
+import { getCurrentDateTime } from "../../data";
 
 const AdminPanel = () => {
   const [postTitle, setPostTitle] = useState("");
@@ -18,15 +21,19 @@ const AdminPanel = () => {
     try {
       e.preventDefault();
 
-      await setDoc(doc(db, "posts", "post"), {
+      const imgRefString = `images/${v4()}`
+      const imageRef = ref(storage, imgRefString);
+
+      await addDoc(collection(db, "posts"), {
+        id: v4(),
         title: postTitle,
         content: postContent,
+        image: imgRefString,
+        timestamp: getCurrentDateTime()
       });
 
-      const storageRef = ref(storage, "images");
-
-      uploadBytes(storageRef, imageUpload).then((snapshot) => {
-        console.log("Image uploaded successfully!");
+      uploadBytes(imageRef, imageUpload).then((snapshot) => {
+        console.log(snapshot);
       });
     } catch (err) {
       console.error(err);

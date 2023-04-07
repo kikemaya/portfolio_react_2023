@@ -39,6 +39,10 @@ export const navigation = [
   //   href: 'portfolio',
   // },
   {
+    name: "blog",
+    href: "blog",
+  },
+  {
     name: "contact",
     href: "contact",
   },
@@ -158,3 +162,24 @@ export const contact = [
     description: "Working from 🏠.",
   },
 ];
+
+
+export function getCurrentDateTime() {
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+
+  const amOrPm = hours < 12 ? 'AM' : 'PM';
+  const formattedHours = hours % 12 || 12;
+  const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+
+  const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+  const month = monthNames[now.getMonth()];
+  const day = now.getDate();
+  const year = now.getFullYear();
+
+  const dateTimeString = `${formattedHours}:${formattedMinutes} ${amOrPm} - ${day} ${month} ${year}`;
+
+  return dateTimeString;
+}
