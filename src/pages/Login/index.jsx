@@ -19,7 +19,7 @@ const Login = () => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, user, password)
       .then((userCredential) => {
-        navigate("/portfolio_react_2023/admin");
+        navigate("/admin");
       })
       .catch((err) => {
         console.error(err);

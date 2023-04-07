@@ -16,26 +16,26 @@ import { AuthProvider } from "./contexts/AuthContext";
 import PrivateRoute from "./components/PrivateRoute";
 
 ReactDOM.render(
-  // <React.StrictMode>
-  <AuthProvider>
-    <BrowserRouter>
-      <Routes>
-        <Route path="*" element={<Error404 />} />
-        <Route path="portfolio_react_2023" element={<App />} />
-        <Route path="portfolio_react_2023/coffe" element={<Error418 />} />
-        <Route path="portfolio_react_2023/login" element={<Login />} />
+  <React.StrictMode>
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="*" element={<Error404 />} />
+          <Route path="/" element={<App />} />
+          <Route path="/coffe" element={<Error418 />} />
+          <Route path="/login" element={<Login />} />
 
-        <Route
-          path="portfolio_react_2023/admin"
-          element={
-            <PrivateRoute>
-              <AdminPanel />
-            </PrivateRoute>
-          }
-        />
-      </Routes>
-    </BrowserRouter>
-  </AuthProvider>,
-  // </React.StrictMode>,
+          <Route
+            path="/admin"
+            element={
+              <PrivateRoute>
+                <AdminPanel />
+              </PrivateRoute>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>,
+  </React.StrictMode>,
   document.getElementById("root")
 );

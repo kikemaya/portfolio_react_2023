@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/portfolio_react_2023/static/css/main.d81acfd4.css",
-    "main.js": "/portfolio_react_2023/static/js/main.de94dedb.js",
-    "static/media/nhero.jpg": "/portfolio_react_2023/static/media/nhero.182b2922177e43cf5133.jpg",
-    "static/media/banner-man2.png": "/portfolio_react_2023/static/media/banner-man2.60054a8b7bfa351bb0f3.png",
-    "static/media/hero-pattern.png": "/portfolio_react_2023/static/media/hero-pattern.56af95d40084f094eb73.png",
-    "static/media/mongo.png": "/portfolio_react_2023/static/media/mongo.b473c1c113167cdfe8b6.png",
-    "static/media/portfolio.svg": "/portfolio_react_2023/static/media/portfolio.2f31f4be113e35cc3442.svg",
-    "static/media/contact.svg": "/portfolio_react_2023/static/media/contact.ec60abf53c38c2593f7e.svg",
-    "static/media/about.svg": "/portfolio_react_2023/static/media/about.70a8290c961c47c208b5.svg",
-    "static/media/epam.svg": "/portfolio_react_2023/static/media/epam.06f2b9c64ec20a2728aa73d180f23918.svg",
-    "index.html": "/portfolio_react_2023/index.html",
-    "main.d81acfd4.css.map": "/portfolio_react_2023/static/css/main.d81acfd4.css.map",
-    "main.de94dedb.js.map": "/portfolio_react_2023/static/js/main.de94dedb.js.map"
+    "main.css": "/static/css/main.4b14938f.css",
+    "main.js": "/static/js/main.21ec3789.js",
+    "static/media/nhero.jpg": "/static/media/nhero.182b2922177e43cf5133.jpg",
+    "static/media/banner-man2.png": "/static/media/banner-man2.60054a8b7bfa351bb0f3.png",
+    "static/media/hero-pattern.png": "/static/media/hero-pattern.56af95d40084f094eb73.png",
+    "static/media/mongo.png": "/static/media/mongo.b473c1c113167cdfe8b6.png",
+    "static/media/portfolio.svg": "/static/media/portfolio.2f31f4be113e35cc3442.svg",
+    "static/media/contact.svg": "/static/media/contact.ec60abf53c38c2593f7e.svg",
+    "static/media/about.svg": "/static/media/about.70a8290c961c47c208b5.svg",
+    "static/media/epam.svg": "/static/media/epam.4b02f381dff8e1a8415e6f952bb66640.svg",
+    "index.html": "/index.html",
+    "main.4b14938f.css.map": "/static/css/main.4b14938f.css.map",
+    "main.21ec3789.js.map": "/static/js/main.21ec3789.js.map"
   },
   "entrypoints": [
-    "static/css/main.d81acfd4.css",
-    "static/js/main.de94dedb.js"
+    "static/css/main.4b14938f.css",
+    "static/js/main.21ec3789.js"
   ]
 }
