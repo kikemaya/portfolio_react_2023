@@ -12,12 +12,11 @@ const useAuth = () => {
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(true);
 
-  // creamos un state para saber cuando termina de
-  // cargar la comprobacion de onAuthStateChanged
+  // state to know when the onAuthStateChanged ends their load
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Validar si hay un usuario
+    // Validate if there is a user signed in
     const cancelSub = onAuthStateChanged(auth, (user) => {
       setUser(user);
       setLoading(false);

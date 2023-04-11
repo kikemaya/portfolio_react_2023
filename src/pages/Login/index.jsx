@@ -27,14 +27,14 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-hero-pattern w-full h-[100vh]">
+    <div className="flex items-center bg-hero-pattern w-full h-screen">
       <form
-        className="space-y-8 w-full max-w-[320px] mx-auto pt-40"
+        className="space-y-8 w-full max-w-[320px] mx-auto"
         onSubmit={handleSubmit}
       >
         <div className="flex items-end gap-5">
           <img src={Logo} alt="" className="h-14" />
-          <h4 className="font-body text-xl mb-1">Welcome, Enrique 😎</h4>
+          <h4 className="font-body text-xl mb-1">Welcome, Sensei 😎</h4>
         </div>
         <input
           className="input"

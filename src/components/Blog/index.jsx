@@ -1,63 +1,75 @@
-import React, { useEffect, useState } from 'react'
-import Post from './Post'
-import { collection, getDocs, query } from 'firebase/firestore'
-import { db, storage } from '../../firebase/firebaseConfig'
-import { getDownloadURL, ref } from 'firebase/storage'
+import { useEffect, useState } from "react";
+
+// firebase products imports
+import { collection, getDocs, query } from "firebase/firestore";
+import { db, storage } from "../../firebase/firebaseConfig";
+import { getDownloadURL, ref } from "firebase/storage";
+
+// import components
+import Post from "./Post";
 
 const Blog = () => {
+  const [dataObtained, setDataObtained] = useState([]);
 
-  const [postData, setPostData] = useState([])
-
-  async function getTextData() {
+  async function getFullDataFromFireStoreAndStorage() {
     try {
-      const arr = []
+      const firestoreDataContainer = [];
 
-      const q = query(collection(db, 'posts'))
+      const q = query(collection(db, "posts"));
 
-      const querySnapshot = await getDocs(q)
+      const querySnapshot = await getDocs(q);
 
-      querySnapshot.forEach(doc => {
-        arr.push(doc.data())
+      querySnapshot.forEach((doc) => {
+        firestoreDataContainer.push(doc.data());
       });
 
-      const arr3 = await Promise.all(arr.map(async element => {
-        let newImageRef = ref(storage, element.image)
-        let publicImageUrl = await getDownloadURL(newImageRef)
+      const fullDataToBePrinted = await Promise.all(
+        firestoreDataContainer.map(async (element) => {
+          let newImageRef = ref(storage, element.image);
+          let publicImageUrl = await getDownloadURL(newImageRef);
 
-        element['fullImageUrl'] = publicImageUrl
-        return element
-      }));
+          element["fullImageUrl"] = publicImageUrl;
+          return element;
+        })
+      );
 
-      setPostData(arr3)
+      setDataObtained(fullDataToBePrinted);
     } catch (err) {
       console.error(err);
     }
   }
 
   useEffect(() => {
-    getTextData()
-  }, [postData])
+    getFullDataFromFireStoreAndStorage();
+  }, []);
 
   return (
     <>
-      <div id='blog' className='bg-primary bg-hero-pattern flex justify-evenly py-20 gap-20 w-full flex-wrap'>
-        {
-          postData.length > 0 ?
-            postData.map(post => {
-              return (<Post
+      <div
+        id="blog"
+        className="bg-primary bg-hero-pattern
+        flex justify-evenly py-20 gap-20
+        w-full flex-wrap"
+      >
+        {dataObtained.length > 0 ? (
+          dataObtained.map((post) => {
+            return (
+              <Post
                 key={post.id}
                 id={post.id}
                 title={post.title}
                 content={post.content}
                 timestamp={post.timestamp}
                 image={post.fullImageUrl}
-              />)
-            })
-            : <h2 className='text-3xl'>There are not posts yet...</h2>
-        }
-      </div >
+              />
+            );
+          })
+        ) : (
+          <h2 className="text-3xl">There are not posts yet...</h2>
+        )}
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;
