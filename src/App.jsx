@@ -10,6 +10,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import BackTopBtn from "./components/BackTopBtn";
 import Blog from "./components/Blog";
+import Opinions from "./components/Opinions";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <About />
       <Skills />
       <Blog />
+      <Opinions />
       {/* <Portfolio /> */}
       <Contact />
       <Footer />

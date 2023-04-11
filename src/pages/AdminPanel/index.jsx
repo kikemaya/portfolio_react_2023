@@ -43,7 +43,7 @@ const AdminPanel = () => {
   const logOut = async () => {
     try {
       await signOut(auth);
-      navigate("/portfolio_react_2023/login");
+      navigate("/login");
     } catch (err) {
       console.error(err);
     }

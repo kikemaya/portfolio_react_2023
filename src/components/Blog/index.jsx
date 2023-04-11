@@ -6,7 +6,7 @@ import { getDownloadURL, ref } from 'firebase/storage'
 
 const Blog = () => {
 
-  const [postData, setPostData] = useState(null)
+  const [postData, setPostData] = useState([])
 
   async function getTextData() {
     try {
@@ -38,17 +38,25 @@ const Blog = () => {
     getTextData()
   }, [postData])
 
-
   return (
-    <div id='blog' className='bg-primary bg-hero-pattern flex justify-evenly py-20 gap-20 w-full flex-wrap'>
-      {
-        postData ?
-          postData.map(post => {
-            return <Post key={post.id} title={post.title} content={post.content} timestamp={post.timestamp} image={post.fullImageUrl} />
-          })
-          : <h2>Adios</h2>
-      }
-    </div >
+    <>
+      <div id='blog' className='bg-primary bg-hero-pattern flex justify-evenly py-20 gap-20 w-full flex-wrap'>
+        {
+          postData.length > 0 ?
+            postData.map(post => {
+              return (<Post
+                key={post.id}
+                id={post.id}
+                title={post.title}
+                content={post.content}
+                timestamp={post.timestamp}
+                image={post.fullImageUrl}
+              />)
+            })
+            : <h2 className='text-3xl'>There are not posts yet...</h2>
+        }
+      </div >
+    </>
   )
 }
 
