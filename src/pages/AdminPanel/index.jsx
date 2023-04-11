@@ -10,12 +10,26 @@ import { ref, uploadBytes } from "firebase/storage";
 import { v4 } from 'uuid'
 import { getCurrentDateTime } from "../../data";
 
+import Swal from "sweetalert2";
+
 const AdminPanel = () => {
   const [postTitle, setPostTitle] = useState("");
   const [postContent, setPostContent] = useState("");
   const [imageUpload, setImageUpload] = useState(null);
 
   let navigate = useNavigate();
+
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener("mouseenter", Swal.stopTimer);
+      toast.addEventListener("mouseleave", Swal.resumeTimer);
+    },
+  });
 
   const handleSubmit = async (e) => {
     try {
@@ -32,9 +46,14 @@ const AdminPanel = () => {
         timestamp: getCurrentDateTime()
       });
 
-      uploadBytes(imageRef, imageUpload).then((snapshot) => {
-        console.log(snapshot);
+      await uploadBytes(imageRef, imageUpload)
+
+      Toast.fire({
+        icon: "success",
+        title: "your post was successfully added",
       });
+
+      e.target.reset();
     } catch (err) {
       console.error(err);
     }

@@ -3,6 +3,8 @@ import { auth, database } from '../../firebase/firebaseConfig'
 import { GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth'
 import { onValue, ref, set } from 'firebase/database';
 import { v4 } from 'uuid';
+import Swal from 'sweetalert2';
+import { getCurrentDateTime } from '../../data';
 
 const Opinions = () => {
   // single comment
@@ -43,10 +45,11 @@ const Opinions = () => {
       postId: v4(),
       user: userAuthenticated.userAuth,
       profilePica: userAuthenticated.userAuthPhotoUrl,
-      comment: singleComment
+      comment: singleComment,
+      timestamp: getCurrentDateTime()
     })
       .then(() => {
-        alert("Data stored successfully!")
+        Swal.fire('Opinion published successfully')
       })
       .catch((err) => {
         alert("Unsuccessfull, error " + err)
@@ -114,7 +117,6 @@ const Opinions = () => {
             </form>
           </div>
       }
-
       <div className='flex gap-5 py-5 flex-wrap justify-center'>
         {
           comments.length > 0 &&
@@ -131,6 +133,7 @@ const Opinions = () => {
                     <b>{comment.user}</b>
                   </p>
                   <p>{comment.comment}</p>
+                  <p>{comment.timestamp}</p>
                 </div>
               </div>)
           })

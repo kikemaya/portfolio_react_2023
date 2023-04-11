@@ -179,7 +179,7 @@ export function getCurrentDateTime() {
   const day = now.getDate();
   const year = now.getFullYear();
 
-  const dateTimeString = `${formattedHours}:${formattedMinutes} ${amOrPm} - ${day} ${month} ${year}`;
+  const dateTimeString = `${formattedHours}:${formattedMinutes} ${amOrPm} - ${month} ${day}, ${year}`;
 
   return dateTimeString;
 }
