@@ -48,9 +48,10 @@ const Blog = () => {
       <div
         id="blog"
         className="bg-primary bg-hero-pattern
-        flex justify-evenly py-20 gap-20
+        flex justify-evenly py-20 px-4 gap-10
         w-full flex-wrap"
       >
+        <h2 className="w-full text-center section-title">Blog posts</h2>
         {dataObtained.length > 0 ? (
           dataObtained.map((post) => {
             return (

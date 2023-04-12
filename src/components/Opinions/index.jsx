@@ -42,6 +42,7 @@ const Opinions = () => {
 
   async function logOut(e) {
     try {
+      e.preventDefault()
       await signOut(auth);
     } catch (err) {
       console.error(err);
@@ -98,12 +99,12 @@ const Opinions = () => {
   }, []);
 
   return (
-    <div className="bg-tertiary bg-hero-pattern flex flex-col w-full justify-center">
+    <div className="bg-tertiary bg-hero-pattern flex flex-col w-full justify-center px-5">
       {
         // IF THERE'S AN AUTHENTICATED USER, SHOW THE SIGN IN BAR, ELSE, SHOW THE LOG OUT BAR AND THE FORM
         myUserAuth === null ? (
-          <div className="flex flex-col w-full items-center py-10">
-            <div className="flex items-center gap-5">
+          <div className={`flex flex-col w-full items-center ${opinions.length > 0 ? "pt-10 pb-0" : "py-10"}`}>
+            <div className="flex items-center gap-5 flex-wrap justify-center">
               <p>Do you want to let me know your opinion?</p>
               <button
                 className="btn bg-white text-blue-600
@@ -118,11 +119,11 @@ const Opinions = () => {
           // FORM TO SEND AN OPINION
           <div
             className={`flex flex-col gap-5 
-            bg-tertiary bg-hero-pattern p-10
+            bg-tertiary bg-hero-pattern pt-10 sm:px-10
             ${opinions.length > 0 ? "pb-0" : "pb-10"}`}
           >
             <form
-              className="flex items-center justify-between gap-5"
+              className="flex items-center justify-between gap-5 flex-wrap"
               onSubmit={logOut}
             >
               <p className="text-xl">
@@ -168,7 +169,7 @@ const Opinions = () => {
                   <p className="flex gap-3">
                     <img
                       src={user.profilePic}
-                      alt="profile pica"
+                      alt="profile"
                       className="rounded-full w-10"
                     />
                     <b>{user.userName}</b>

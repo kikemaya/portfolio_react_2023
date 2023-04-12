@@ -49,16 +49,12 @@ const Contact = () => {
   };
 
   return (
-    <section className="section bg-secondary bg-hero-pattern" id="contact">
+    <section className="section bg-primary bg-hero-pattern" id="contact">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center">
           <h2 className="mb-12 section-title before:content-contact relative before:absolute before:opacity-40 before:-top-7 before:-left-40 before:hidden before:lg:block">
             Contact me
           </h2>
-          {/* <p className='subtitle'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga veniam
-            labore nisium illum cupiditate reiciendis a numquam
-          </p> */}
         </div>
 
         <div className="flex flex-col lg:gap-x-8 lg:flex-row">
