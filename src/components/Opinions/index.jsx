@@ -70,7 +70,7 @@ const Opinions = () => {
   };
 
   const getAllOpinions = () => {
-    console.log("opninion");
+    
     const dbRef = ref(database, "clientOpinions");
 
     onValue(dbRef, (snapshot) => {
