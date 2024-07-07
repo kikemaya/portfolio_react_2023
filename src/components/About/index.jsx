@@ -20,18 +20,14 @@ const About = () => {
                 Enrique Maya
               </h2>
               <p className="mb-4 text-accent">
-                MMA fan | The funniest amateur poet | Eternal student.
+                MMA Fan 🥊| Investments Enthusiast 📈 | Eternal Student 🧑🏽‍💻
               </p>
               <hr className="mb-8 opacity-5" />
               <p className="mb-8">
-                Just another web3 enthusiast. Lover of creating functional and
-                intuitive products that people can enjoy and find actually
-                usefull.
+              Passionate web developer dedicated to crafting beautiful and functional websites. PC building enthusiast and a strong team player.  
                 <br />
                 <br />
-                I love working as a team. Passionate about sharing knowledge
-                creating real connections with people and reaching ambitious
-                goals together.
+                I enjoy spending my downtime with my family, running, engaging in contact sports, and pursuing lifelong learning.
                 <br />
                 <br />
                 One of my greatest strengths is public speaking. Verbal
