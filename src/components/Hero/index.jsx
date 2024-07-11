@@ -1,5 +1,7 @@
 import React from "react";
 
+import { motion } from "framer-motion";
+
 // import banner image
 import ManImg from "./../../assets/img/profile-hero-section.png";
 
@@ -24,14 +26,17 @@ const Hero = () => {
               Also a very proud and happy teacher. I really enjoy connecting
               with people and helping them. So...
             </p>
-            <Link
-              className="transition-all duration-300 cursor-pointer btn btn-md bg-accent hover:bg-secondary-hover md:btn-lg "
-              to="contact"
-              smooth={true}
-              duration={1500}
-            >
-              How can I help you?
-            </Link>
+
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <Link
+                className="transition-all duration-300 cursor-pointer btn btn-md bg-accent hover:bg-secondary-hover md:btn-lg "
+                to="contact"
+                smooth={true}
+                duration={1500}
+              >
+                How can I help you?
+              </Link>
+            </motion.div>
           </div>
           <div className="items-end justify-end flex-1 hidden h-full lg:flex">
             <img src={ManImg} alt="Enrique Maya" />

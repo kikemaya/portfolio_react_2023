@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import { motion } from "framer-motion";
+
 // IMPORT FIREBASE CONFIG
 import { auth, database } from "../../firebase/firebaseConfig";
 
@@ -109,12 +111,14 @@ const Opinions = () => {
           >
             <div className="flex flex-wrap items-center justify-center gap-5">
               <p>Do you want to let me know your opinion?</p>
-              <button
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 className="text-blue-600 bg-white rounded-md btn hover:bg-white"
                 onClick={signInForComment}
               >
                 Sign In with Google
-              </button>
+              </motion.button>
             </div>
           </div>
         ) : (

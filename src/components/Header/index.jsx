@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+import { motion } from "framer-motion";
 // import components
 import Logo from "./../../assets/img/logo.png";
 import Nav from "../Nav";
@@ -22,7 +23,14 @@ const Header = () => {
       } flex items-center fixed top-0 w-full text-white z-10 transition-all duration-300`}
     >
       <div className="container flex items-center justify-between h-full mx-auto">
-        <img src={Logo} alt="" className="h-14" />
+        <motion.img
+          initial={{ x: -100 }}
+          transition={{ duration: 0.5 }}
+          animate={{ x: 0 }}
+          src={Logo}
+          alt=""
+          className="h-14"
+        />
 
         {/* nav */}
         <div className="hidden lg:block">

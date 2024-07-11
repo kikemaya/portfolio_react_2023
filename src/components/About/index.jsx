@@ -67,14 +67,16 @@ const About = () => {
                 </cite>
               </p>
             </div>
-            <Link
-              className="transition-all cursor-pointer btn btn-md bg-accent hover:bg-secondary-hover"
-              to="contact"
-              smooth={true}
-              duration={1000}
-            >
-              Contact me
-            </Link>
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <Link
+                className="transition-all cursor-pointer btn btn-md bg-accent hover:bg-secondary-hover"
+                to="contact"
+                smooth={true}
+                duration={1000}
+              >
+                Contact me
+              </Link>
+            </motion.div>
           </div>
         </div>
       </motion.div>

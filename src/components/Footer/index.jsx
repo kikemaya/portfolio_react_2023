@@ -1,5 +1,7 @@
 import React from "react";
 
+import { motion } from "framer-motion";
+
 // import social data
 import { social } from "../../data";
 
@@ -19,7 +21,9 @@ const Footer = () => {
             {social.map((item, index) => {
               const { href, icon } = item;
               return (
-                <a
+                <motion.a
+                  whileHover={{ scale: 1.5 }}
+                  whileTap={{ scale: 0.9 }}
                   className="text-base text-accent"
                   href={href}
                   key={index}
@@ -27,7 +31,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                 >
                   {icon}
-                </a>
+                </motion.a>
               );
             })}
           </div>

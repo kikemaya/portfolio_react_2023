@@ -1,5 +1,7 @@
 import React from "react";
 
+import { motion } from "framer-motion";
+
 // import navigation data
 import { navigation } from "../../data";
 
@@ -11,10 +13,17 @@ import { Link } from "react-scroll";
 const Nav = () => {
   return (
     <nav>
-      <ul className="flex space-x-8 capitalize text-[15px]">
+      <motion.ul
+        initial={{ y: -100 }}
+        transition={{ duration: 0.5 }}
+        animate={{ y: 0 }}
+        className="flex space-x-8 capitalize text-[15px]"
+      >
         {navigation.map((item, idx) => {
           return (
-            <li
+            <motion.li
+              whileHover={{ scale: 1.3 }}
+              whileTap={{ scale: 0.9 }}
               className="text-white cursor-pointer hover:text-accent"
               key={idx}
             >
@@ -29,11 +38,11 @@ const Nav = () => {
               >
                 {item.name}
               </Link>
-            </li>
+            </motion.li>
           );
         })}
         {/* <LinkRouter to="/blog">Blog</LinkRouter> */}
-      </ul>
+      </motion.ul>
     </nav>
   );
 };

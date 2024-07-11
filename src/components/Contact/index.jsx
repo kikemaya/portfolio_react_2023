@@ -1,5 +1,7 @@
 import React from "react";
 
+import { motion } from "framer-motion";
+
 // import contact data
 import { contact } from "../../data";
 
@@ -110,9 +112,13 @@ const Contact = () => {
               required
             ></textarea>
 
-            <button className="btn btn-lg bg-accent hover:bg-secondary-hover">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="btn btn-lg bg-accent hover:bg-secondary-hover"
+            >
               Let's chat!
-            </button>
+            </motion.button>
           </form>
         </div>
       </div>

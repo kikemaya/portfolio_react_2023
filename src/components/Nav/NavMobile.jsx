@@ -47,12 +47,15 @@ const NavMobile = () => {
 
   return (
     <nav className="relative">
-      <div
+      <motion.div
+        initial={{ x: 100 }}
+        transition={{ duration: 0.5 }}
+        animate={{ x: 0 }}
         onClick={() => setIsOpen(true)}
         className="text-white cursor-pointer"
       >
         <MenuAlt3Icon className="w-8 h-8" />
-      </div>
+      </motion.div>
 
       {/* circle */}
       <motion.div
