@@ -84,13 +84,11 @@ const AdminPanel = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center gap-5 bg-hero-pattern h-screen px-5">
+    <div className="flex flex-col items-center justify-center h-screen gap-5 px-5 bg-hero-pattern">
       <div className="flex items-center justify-between w-full max-w-[780px]">
         <h1 className="text-xl">Admin Panel</h1>
         <button
-          className="
-            btn btn-lg
-          bg-accent hover:bg-secondary-hover"
+          className=" btn btn-lg bg-accent hover:bg-secondary-hover"
           onClick={logOut}
         >
           Logout
@@ -127,12 +125,7 @@ const AdminPanel = () => {
           required
         ></textarea>
 
-        <button
-          className="
-            btn btn-lg
-            bg-accent hover:bg-secondary-hover
-            "
-        >
+        <button className=" btn btn-lg bg-accent hover:bg-secondary-hover">
           Submit
         </button>
       </form>

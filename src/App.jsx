@@ -14,7 +14,7 @@ import Opinions from "./components/Opinions";
 
 const App = () => {
   return (
-    <div className="bg-white relative">
+    <div className="relative bg-white">
       <Header />
       <Hero />
       <Brands />

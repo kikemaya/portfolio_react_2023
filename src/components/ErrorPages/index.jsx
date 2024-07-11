@@ -1,15 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function Error404() {
   return (
-    <div
-      className='
-        flex h-screen w-full justify-center
-        items-center text-white text-4xl
-    '>
+    <div className="flex items-center justify-center w-full h-screen text-4xl text-white ">
       Error 404: Resource not found...
     </div>
-  )
+  );
 }
 
-export default Error404
+export default Error404;

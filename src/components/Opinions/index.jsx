@@ -42,7 +42,7 @@ const Opinions = () => {
 
   async function logOut(e) {
     try {
-      e.preventDefault()
+      e.preventDefault();
       await signOut(auth);
     } catch (err) {
       console.error(err);
@@ -70,7 +70,6 @@ const Opinions = () => {
   };
 
   const getAllOpinions = () => {
-    
     const dbRef = ref(database, "clientOpinions");
 
     onValue(dbRef, (snapshot) => {
@@ -99,16 +98,19 @@ const Opinions = () => {
   }, []);
 
   return (
-    <div className="bg-tertiary bg-hero-pattern flex flex-col w-full justify-center px-5">
+    <div className="flex flex-col justify-center w-full px-5 bg-tertiary bg-hero-pattern">
       {
         // IF THERE'S AN AUTHENTICATED USER, SHOW THE SIGN IN BAR, ELSE, SHOW THE LOG OUT BAR AND THE FORM
         myUserAuth === null ? (
-          <div className={`flex flex-col w-full items-center ${opinions.length > 0 ? "pt-10 pb-0" : "py-10"}`}>
-            <div className="flex items-center gap-5 flex-wrap justify-center">
+          <div
+            className={`flex flex-col w-full items-center ${
+              opinions.length > 0 ? "pt-10 pb-0" : "py-10"
+            }`}
+          >
+            <div className="flex flex-wrap items-center justify-center gap-5">
               <p>Do you want to let me know your opinion?</p>
               <button
-                className="btn bg-white text-blue-600
-                  rounded-md hover:bg-white"
+                className="text-blue-600 bg-white rounded-md btn hover:bg-white"
                 onClick={signInForComment}
               >
                 Sign In with Google
@@ -123,29 +125,26 @@ const Opinions = () => {
             ${opinions.length > 0 ? "pb-0" : "pb-10"}`}
           >
             <form
-              className="flex items-center justify-between gap-5 flex-wrap"
+              className="flex flex-wrap items-center justify-between gap-5"
               onSubmit={logOut}
             >
               <p className="text-xl">
                 Welcome, {auth.currentUser.displayName}!
               </p>
-              <button className="btn bg-accent rounded-md">Log out</button>
+              <button className="rounded-md btn bg-accent">Log out</button>
             </form>
 
             <form
               onSubmit={handleUserSubmitOpinion}
-              className="flex gap-5 items-center"
+              className="flex items-center gap-5"
             >
               <input
                 type="text"
                 placeholder="Write an opinion"
-                className="input focus:outline-blue-600 rounded-md"
+                className="rounded-md input focus:outline-blue-600"
                 onChange={(e) => setSingleComment(e.target.value)}
               />
-              <button
-                className="btn btn-lg
-                bg-blue-600 hover:bg-blue-800 rounded-md"
-              >
+              <button className="bg-blue-600 rounded-md btn btn-lg hover:bg-blue-800">
                 Send
               </button>
             </form>
@@ -161,8 +160,7 @@ const Opinions = () => {
           opinions.map((user) => {
             return (
               <div
-                className="gap-5 p-5
-                bg-primary bg-hero-pattern rounded-lg w-96"
+                className="gap-5 p-5 rounded-lg bg-primary bg-hero-pattern w-96"
                 key={user.postId}
               >
                 <div className="flex flex-col gap-5">
@@ -170,7 +168,7 @@ const Opinions = () => {
                     <img
                       src={user.profilePic}
                       alt="profile"
-                      className="rounded-full w-10"
+                      className="w-10 rounded-full"
                     />
                     <b>{user.userName}</b>
                   </p>

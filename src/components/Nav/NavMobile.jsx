@@ -49,7 +49,7 @@ const NavMobile = () => {
     <nav className="relative">
       <div
         onClick={() => setIsOpen(true)}
-        className="cursor-pointer text-white"
+        className="text-white cursor-pointer"
       >
         <MenuAlt3Icon className="w-8 h-8" />
       </div>
@@ -59,7 +59,7 @@ const NavMobile = () => {
         variants={circleVariants}
         initial="hidden"
         animate={isOpen ? "visible" : "hidden"}
-        className="w-4 h-4 rounded-full bg-primary bg-hero-pattern fixed top-0 right-0"
+        className="fixed top-0 right-0 w-4 h-4 rounded-full bg-primary bg-hero-pattern"
       ></motion.div>
 
       <motion.ul
@@ -72,7 +72,7 @@ const NavMobile = () => {
       >
         <div
           onClick={() => setIsOpen(false)}
-          className="cursor-pointer absolute top-8 right-8"
+          className="absolute cursor-pointer top-8 right-8"
         >
           <XIcon className="w-8 h-8" />
         </div>
@@ -84,7 +84,7 @@ const NavMobile = () => {
                 smooth={true}
                 duration={500}
                 offset={-70}
-                className="text-xl cursor-pointer capitalize"
+                className="text-xl capitalize cursor-pointer"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
@@ -92,7 +92,7 @@ const NavMobile = () => {
             </li>
           );
         })}
-        {/* <LinkRouter to="/blog" className="text-xl cursor-pointer capitalize">
+        {/* <LinkRouter to="/blog" className="text-xl capitalize cursor-pointer">
           Blog
         </LinkRouter> */}
         <Socials />

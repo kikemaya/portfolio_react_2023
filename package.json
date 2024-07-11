@@ -23,6 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -46,7 +47,7 @@
   "devDependencies": {
     "@heroicons/react": "1.0.6",
     "autoprefixer": "10.4.2",
-    "framer-motion": "6.2.8",
+    "framer-motion": "^6.5.1",
     "gh-pages": "4.0.0",
     "postcss": "8.4.8",
     "react-icons": "4.3.1",

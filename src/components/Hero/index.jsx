@@ -11,9 +11,9 @@ const Hero = () => {
       id="home"
       className="h-[100vh] flex items-center bg-primary lg:bg-cover lg:bg-center lg:bg-no-repeat py-32 lg:py-0 overflow-hidden bg-hero-pattern"
     >
-      <div className="container mx-auto h-full">
+      <div className="container h-full mx-auto">
         <div className="flex items-center h-full">
-          <div className="flex-1 flex flex-col items-center lg:items-start h-3/4 justify-end">
+          <div className="flex flex-col items-center justify-end flex-1 lg:items-start h-3/4">
             <p className="text-2xl text-accent  mb-[22px]">
               Hey, I'm Enrique Maya! 👨🏽‍💻🙌
             </p>
@@ -25,11 +25,7 @@ const Hero = () => {
               with people and helping them. So...
             </p>
             <Link
-              className="btn btn-md
-            bg-accent hover:bg-secondary-hover
-            md:btn-lg transition-all duration-300
-            cursor-pointer
-            "
+              className="transition-all duration-300 cursor-pointer btn btn-md bg-accent hover:bg-secondary-hover md:btn-lg "
               to="contact"
               smooth={true}
               duration={1500}
@@ -37,7 +33,7 @@ const Hero = () => {
               How can I help you?
             </Link>
           </div>
-          <div className="hidden lg:flex flex-1 justify-end items-end h-full">
+          <div className="items-end justify-end flex-1 hidden h-full lg:flex">
             <img src={ManImg} alt="Enrique Maya" />
           </div>
         </div>

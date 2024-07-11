@@ -47,9 +47,7 @@ const Blog = () => {
     <>
       <div
         id="blog"
-        className="bg-primary bg-hero-pattern
-        flex justify-evenly py-20 px-4 gap-10
-        w-full flex-wrap"
+        className="flex flex-wrap w-full gap-10 px-4 py-20 bg-primary bg-hero-pattern justify-evenly"
       >
         <h2 className="w-full text-center section-title">Blog posts</h2>
         {dataObtained.length > 0 ? (

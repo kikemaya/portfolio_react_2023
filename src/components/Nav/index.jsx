@@ -15,7 +15,7 @@ const Nav = () => {
         {navigation.map((item, idx) => {
           return (
             <li
-              className="text-white hover:text-accent cursor-pointer"
+              className="text-white cursor-pointer hover:text-accent"
               key={idx}
             >
               <Link

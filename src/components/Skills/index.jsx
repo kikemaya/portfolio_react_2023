@@ -7,7 +7,7 @@ import { skills } from "../../data";
 
 const Skills = () => {
   return (
-    <section className="bg-tertiary bg-hero-pattern py-12">
+    <section className="py-12 bg-tertiary bg-hero-pattern">
       <div className="container mx-auto">
         <div className="grid grid-cols-8 md:grid-flow-col">
           {skills.map((skill, index) => {
@@ -22,7 +22,7 @@ const Skills = () => {
                 viewport={{
                   amount: "all",
                 }}
-                className="flex items-center justify-center transition-all duration-1000"
+                className="flex items-center justify-center transition-all"
                 key={index}
               >
                 <img className="lg:h-20" src={skill.image} alt="" />

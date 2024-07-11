@@ -1,14 +1,33 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-scroll";
+
+import { motion, useScroll, useTransform } from "framer-motion";
 
 // import img
 import Image from "./../../assets/img/nhero.jpg";
 
 const About = () => {
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  });
+
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
   return (
-    <section className="section bg-secondary bg-hero-pattern" id="about">
-      <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row gap-24">
+    <section className="bg-secondary section bg-hero-pattern" id="about">
+      <motion.div
+        ref={ref}
+        style={{
+          scale: scaleProgress,
+          opacity: opacityProgress,
+        }}
+        className="container mx-auto "
+      >
+        <div className="flex flex-col gap-24 xl:flex-row">
           <img
             className="object-cover h-full w-[566px] md:mx-auto lg:mx-0 rounded-2xl"
             src={Image}
@@ -24,10 +43,13 @@ const About = () => {
               </p>
               <hr className="mb-8 opacity-5" />
               <p className="mb-8">
-              Passionate web developer dedicated to crafting beautiful and functional websites. PC building enthusiast and a strong team player.  
+                Passionate web developer dedicated to crafting beautiful and
+                functional websites. PC building enthusiast and a strong team
+                player.
                 <br />
                 <br />
-                I enjoy spending my downtime with my family, running, engaging in contact sports, and pursuing lifelong learning.
+                I enjoy spending my downtime with my family, running, engaging
+                in contact sports, and pursuing lifelong learning.
                 <br />
                 <br />
                 One of my greatest strengths is public speaking. Verbal
@@ -46,9 +68,7 @@ const About = () => {
               </p>
             </div>
             <Link
-              className="btn btn-md
-              bg-accent hover:bg-secondary-hover
-              transition-all cursor-pointer"
+              className="transition-all cursor-pointer btn btn-md bg-accent hover:bg-secondary-hover"
               to="contact"
               smooth={true}
               duration={1000}
@@ -57,7 +77,7 @@ const About = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

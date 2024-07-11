@@ -4,11 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 import { auth } from "./../../firebase/firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { useAuth } from "../../contexts/AuthContext";
 
 const Login = () => {
-  const { userAuth } = useAuth();
-
   let navigate = useNavigate();
 
   const [user, setUser] = useState("");
@@ -27,14 +24,14 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center bg-hero-pattern w-full h-screen">
+    <div className="flex items-center w-full h-screen bg-hero-pattern">
       <form
         className="space-y-8 w-full max-w-[320px] mx-auto"
         onSubmit={handleSubmit}
       >
         <div className="flex items-end gap-5">
           <img src={Logo} alt="" className="h-14" />
-          <h4 className="font-body text-xl mb-1">Welcome, Sensei 😎</h4>
+          <h4 className="mb-1 text-xl font-body">Welcome, Sensei 😎</h4>
         </div>
         <input
           className="input"
@@ -53,10 +50,7 @@ const Login = () => {
           required
         />
 
-        <button
-          className="btn btn-lg
-            bg-accent hover:bg-secondary-hover"
-        >
+        <button className="btn btn-lg bg-accent hover:bg-secondary-hover">
           Sign In
         </button>
       </form>

@@ -8,10 +8,10 @@ import Logo from "./../../assets/img/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-tertiary bg-hero-pattern py-2">
+    <footer className="py-2 bg-tertiary bg-hero-pattern">
       <div className="container mx-auto my-6">
-        <div className="flex flex-col lg:flex-row space-y-6 lg:space-y-0 items-center justify-between">
-          <div className="flex space-x-6 items-center justify-center">
+        <div className="flex flex-col items-center justify-between space-y-6 lg:flex-row lg:space-y-0">
+          <div className="flex items-center justify-center space-x-6">
             <div className="mr-4">
               <img src={Logo} alt="" className="h-14" />
             </div>
@@ -20,7 +20,7 @@ const Footer = () => {
               const { href, icon } = item;
               return (
                 <a
-                  className="text-accent text-base"
+                  className="text-base text-accent"
                   href={href}
                   key={index}
                   target="_blank"
