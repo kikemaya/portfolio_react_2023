@@ -85,6 +85,7 @@ const NavMobile = () => {
                 duration={500}
                 offset={-70}
                 className="text-xl cursor-pointer capitalize"
+                onClick={() => setIsOpen(false)}
               >
                 {item.name}
               </Link>

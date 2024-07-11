@@ -1,7 +1,7 @@
 import React from "react";
 
 // import banner image
-import ManImg from "./../../assets/img/banner-man2.png";
+import ManImg from "./../../assets/img/profile-hero-section.png";
 
 import { Link } from "react-scroll";
 
@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="lg:h-[100vh] flex items-center bg-primary lg:bg-cover lg:bg-center lg:bg-no-repeat py-32 lg:py-0 overflow-hidden bg-hero-pattern"
+      className="h-[100vh] flex items-center bg-primary lg:bg-cover lg:bg-center lg:bg-no-repeat py-32 lg:py-0 overflow-hidden bg-hero-pattern"
     >
       <div className="container mx-auto h-full">
         <div className="flex items-center h-full">

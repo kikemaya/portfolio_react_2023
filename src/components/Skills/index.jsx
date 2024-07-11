@@ -1,5 +1,7 @@
 import React from "react";
 
+import { motion } from "framer-motion";
+
 // import skill data
 import { skills } from "../../data";
 
@@ -10,9 +12,21 @@ const Skills = () => {
         <div className="grid grid-cols-8 md:grid-flow-col">
           {skills.map((skill, index) => {
             return (
-              <div className="flex items-center justify-center" key={index}>
+              <motion.div
+                initial={{
+                  opacity: 0,
+                }}
+                whileInView={{
+                  opacity: 1,
+                }}
+                viewport={{
+                  amount: "all",
+                }}
+                className="flex items-center justify-center transition-all duration-1000"
+                key={index}
+              >
                 <img className="lg:h-20" src={skill.image} alt="" />
-              </div>
+              </motion.div>
             );
           })}
         </div>

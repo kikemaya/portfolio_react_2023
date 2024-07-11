@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.fa27750d.css",
-    "main.js": "/static/js/main.d6bd45f3.js",
+    "main.css": "/static/css/main.0ab033b5.css",
+    "main.js": "/static/js/main.94439040.js",
     "static/media/nhero.jpg": "/static/media/nhero.9f94ed9be2a425ca6b65.jpg",
-    "static/media/banner-man2.png": "/static/media/banner-man2.3b7a6e275c0475faaf83.png",
+    "static/media/profile-hero-section.png": "/static/media/profile-hero-section.286165cbbecc84d443e1.png",
     "static/media/portfolio.svg": "/static/media/portfolio.7e078c690d0b0a89b116.svg",
     "static/media/contact.svg": "/static/media/contact.b5e0add856b553cf00bc.svg",
     "static/media/epam.svg": "/static/media/epam.4b02f381dff8e1a8415e6f952bb66640.svg",
     "static/media/about.svg": "/static/media/about.12975c0fcfa0bf3bd964.svg",
     "index.html": "/index.html",
-    "main.fa27750d.css.map": "/static/css/main.fa27750d.css.map",
-    "main.d6bd45f3.js.map": "/static/js/main.d6bd45f3.js.map"
+    "main.0ab033b5.css.map": "/static/css/main.0ab033b5.css.map",
+    "main.94439040.js.map": "/static/js/main.94439040.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa27750d.css",
-    "static/js/main.d6bd45f3.js"
+    "static/css/main.0ab033b5.css",
+    "static/js/main.94439040.js"
   ]
 }
