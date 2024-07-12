@@ -49,7 +49,7 @@ const NavMobile = () => {
     <nav className="relative">
       <motion.div
         initial={{ x: 100 }}
-        transition={{ duration: 0.5 }}
+        // transition={{ duration: 0.5 }}
         animate={{ x: 0 }}
         onClick={() => setIsOpen(true)}
         className="text-white cursor-pointer"

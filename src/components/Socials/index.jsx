@@ -9,7 +9,6 @@ const Socials = () => {
   return (
     <motion.ul
       initial={{ x: 100 }}
-      transition={{ duration: 0.5 }}
       animate={{ x: 0 }}
       className="flex space-x-6"
     >
@@ -22,7 +21,7 @@ const Socials = () => {
             key={index}
           >
             <a
-              className="text-base"
+              className="text-lg"
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"

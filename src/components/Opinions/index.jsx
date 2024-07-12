@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
-
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 // IMPORT FIREBASE CONFIG
 import { auth, database } from "../../firebase/firebaseConfig";
@@ -23,6 +21,8 @@ import Swal from "sweetalert2";
 // CUSTOM FUNCTION TO GET A FORMATTED DATE TIME
 import { getCurrentDateTime } from "../../data";
 
+import { motion, useScroll, useTransform } from "framer-motion";
+
 const Opinions = () => {
   // STATE TO KNOW IF THERE'S A USER SIGNED IN
   const [myUserAuth, setMyUserAuth] = useState(null);
@@ -32,6 +32,16 @@ const Opinions = () => {
 
   // ARRAY OF ALL OPINIONS
   const [opinions, setOpinions] = useState([]);
+
+  const domRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: domRef,
+    offset: ["0 1", "0.8 1"],
+  });
+
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.4, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.4, 1]);
 
   async function signInForComment() {
     try {
@@ -114,6 +124,7 @@ const Opinions = () => {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
+                transition={{ duration: 0 }}
                 className="text-blue-600 bg-white rounded-md btn hover:bg-white"
                 onClick={signInForComment}
               >
@@ -156,8 +167,13 @@ const Opinions = () => {
         )
       }
       {/* PRINT OPINIONS SECTION */}
-      <div
-        className={`flex gap-5 flex-wrap justify-center 
+      <motion.div
+        domRef={domRef}
+        style={{
+          scale: scaleProgress,
+          opacity: opacityProgress,
+        }}
+        className={`flex gap-5 flex-wrap justify-center
         ${opinions.length > 0 ? "py-10" : "py-0"}`}
       >
         {opinions.length > 0 &&
@@ -182,7 +198,7 @@ const Opinions = () => {
               </div>
             );
           })}
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -25,7 +25,7 @@ const About = () => {
           scale: scaleProgress,
           opacity: opacityProgress,
         }}
-        className="container mx-auto "
+        className="container mx-auto"
       >
         <div className="flex flex-col gap-24 xl:flex-row">
           <img
@@ -72,7 +72,7 @@ const About = () => {
                 className="transition-all cursor-pointer btn btn-md bg-accent hover:bg-secondary-hover"
                 to="contact"
                 smooth={true}
-                duration={1000}
+                duration={1500}
               >
                 Contact me
               </Link>

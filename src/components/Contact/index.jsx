@@ -113,6 +113,7 @@ const Contact = () => {
             ></textarea>
 
             <motion.button
+              transition={{ duration: 0 }}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="btn btn-lg bg-accent hover:bg-secondary-hover"

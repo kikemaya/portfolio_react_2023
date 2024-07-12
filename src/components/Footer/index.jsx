@@ -15,7 +15,19 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-between space-y-6 lg:flex-row lg:space-y-0">
           <div className="flex items-center justify-center space-x-6">
             <div className="mr-4">
-              <img src={Logo} alt="" className="h-14" />
+              <a href="/">
+                <motion.img
+                  src={Logo}
+                  alt=""
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 360,
+                    transition: { duration: 0.5 },
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                  className="h-14 hover:cursor-pointer"
+                />
+              </a>
             </div>
 
             {social.map((item, index) => {
@@ -24,7 +36,7 @@ const Footer = () => {
                 <motion.a
                   whileHover={{ scale: 1.5 }}
                   whileTap={{ scale: 0.9 }}
-                  className="text-base text-accent"
+                  className="text-lg text-accent"
                   href={href}
                   key={index}
                   target="_blank"
@@ -37,7 +49,7 @@ const Footer = () => {
           </div>
 
           <p className="text-paragraph opacity-80 text-[15px]">
-            &copy; 2023 Enrique Maya. All rights reserved.
+            &copy; 2024 Enrique Maya. All rights reserved.
           </p>
         </div>
       </div>

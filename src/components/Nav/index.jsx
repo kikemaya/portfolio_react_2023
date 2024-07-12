@@ -15,7 +15,6 @@ const Nav = () => {
     <nav>
       <motion.ul
         initial={{ y: -100 }}
-        transition={{ duration: 0.5 }}
         animate={{ y: 0 }}
         className="flex space-x-8 capitalize text-[15px]"
       >

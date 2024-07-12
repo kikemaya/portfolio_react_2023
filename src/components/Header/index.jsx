@@ -23,14 +23,21 @@ const Header = () => {
       } flex items-center fixed top-0 w-full text-white z-10 transition-all duration-300`}
     >
       <div className="container flex items-center justify-between h-full mx-auto">
-        <motion.img
-          initial={{ x: -100 }}
-          transition={{ duration: 0.5 }}
-          animate={{ x: 0 }}
-          src={Logo}
-          alt=""
-          className="h-14"
-        />
+        <a href="/">
+          <motion.img
+            initial={{ x: -100 }}
+            animate={{ x: 0 }}
+            whileHover={{
+              scale: 1.2,
+              rotate: 360,
+              transition: { duration: 0.5 },
+            }}
+            whileTap={{ scale: 0.9 }}
+            src={Logo}
+            alt="logo"
+            className="h-14 hover:cursor-pointer"
+          />
+        </a>
 
         {/* nav */}
         <div className="hidden lg:block">
