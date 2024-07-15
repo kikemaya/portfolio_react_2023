@@ -49,7 +49,6 @@ const NavMobile = () => {
     <nav className="relative">
       <motion.div
         initial={{ x: 100 }}
-        // transition={{ duration: 0.5 }}
         animate={{ x: 0 }}
         onClick={() => setIsOpen(true)}
         className="text-white cursor-pointer"
@@ -61,6 +60,7 @@ const NavMobile = () => {
       <motion.div
         variants={circleVariants}
         initial="hidden"
+        transition={{ duration: 0.4 }}
         animate={isOpen ? "visible" : "hidden"}
         className="fixed top-0 right-0 w-4 h-4 rounded-full bg-primary bg-hero-pattern"
       ></motion.div>
@@ -81,23 +81,20 @@ const NavMobile = () => {
         </div>
         {navigation.map((item, idx) => {
           return (
-            <li key={idx} className="mb-8">
-              <Link
-                to={item.href}
-                smooth={true}
-                duration={500}
-                offset={-70}
-                className="text-xl capitalize cursor-pointer"
-                onClick={() => setIsOpen(false)}
-              >
+            <Link
+              to={item.href}
+              smooth={true}
+              duration={500}
+              offset={-70}
+              className="text-xl capitalize cursor-pointer"
+              onClick={() => setIsOpen(false)}
+            >
+              <li key={idx} className="mb-8">
                 {item.name}
-              </Link>
-            </li>
+              </li>
+            </Link>
           );
         })}
-        {/* <LinkRouter to="/blog" className="text-xl capitalize cursor-pointer">
-          Blog
-        </LinkRouter> */}
         <Socials />
       </motion.ul>
     </nav>

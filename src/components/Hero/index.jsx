@@ -16,8 +16,8 @@ const Hero = () => {
       <div className="container h-full mx-auto">
         <div className="flex items-center h-full">
           <motion.div
-            initial={{ x: -50 }}
-            animate={{ x: 0 }}
+            initial={{ y: 50 }}
+            animate={{ y: 0 }}
             className="flex flex-col items-center justify-end flex-1 lg:items-start h-3/4"
           >
             <p className="text-2xl text-accent  mb-[22px]">
