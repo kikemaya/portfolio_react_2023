@@ -7,12 +7,12 @@ import DevF from "./assets/img/brands/devf.png";
 import Epam from "./assets/img/brands/epam.svg";
 
 // projects images
-// import Project1 from './assets/img/projects/p1.webp';
-// import Project2 from './assets/img/projects/p2.webp';
-// import Project3 from './assets/img/projects/p3.webp';
-// import Project4 from './assets/img/projects/p4.webp';
-// import Project5 from './assets/img/projects/p5.webp';
-// import Project6 from './assets/img/projects/p6.webp';
+import Project1 from "./assets/img/projects/p1.webp";
+import Project2 from "./assets/img/projects/p2.webp";
+import Project3 from "./assets/img/projects/p3.webp";
+import Project4 from "./assets/img/projects/p4.webp";
+import Project5 from "./assets/img/projects/p5.webp";
+import Project6 from "./assets/img/projects/p6.webp";
 
 import SkillImg2 from "./assets/img/skills/css3.png";
 import SkillImg6 from "./assets/img/skills/firebase.png";
@@ -36,16 +36,16 @@ export const navigation = [
 		name: "about",
 		href: "about",
 	},
-	// {
-	//   id: "d937e545-d9b4-4d16-b976-550606fa9c6a",
-	//   name: 'portfolio',
-	//   href: 'portfolio',
-	// },
 	{
-		id: "d8b236e7-80be-451c-82d5-e6e2fe3bc373",
-		name: "blog",
-		href: "blog",
+		id: "d937e545-d9b4-4d16-b976-550606fa9c6a",
+		name: "portfolio",
+		href: "portfolio",
 	},
+	// {
+	//   id: "d8b236e7-80be-451c-82d5-e6e2fe3bc373",
+	//   name: "blog",
+	//   href: "blog",
+	// },
 	{
 		id: "2d5c0480-beb6-46be-8da3-d20a9e8bdc58",
 		name: "contact",
@@ -89,45 +89,51 @@ export const brands = [
 	},
 ];
 
-// projects
-// export const projectsData = [
-//   {
-//     id: '1',
-//     image: Project1,
-//     name: 'To do',
-//     // category: 'UI/UX design',
-//   },
-//   {
-//     id: '2',
-//     image: Project2,
-//     name: 'Weather Api',
-//     // category: 'web development',
-//   },
-//   {
-//     id: '3',
-//     image: Project3,
-//     name: 'Contact List',
-//     // category: 'UI/UX design',
-//   },
-//   {
-//     id: '4',
-//     image: Project4,
-//     name: 'Quiz',
-//     // category: 'branding',
-//   },
-//   {
-//     id: '5',
-//     image: Project5,
-//     name: 'Rock Paper Scissors',
-//     // category: 'web development',
-//   },
-//   {
-//     id: '6',
-//     image: Project6,
-//     name: 'Memory Game',
-//     // category: 'web development',
-//   },
-// ];
+// projects;
+export const projectsData = [
+	{
+		id: "1",
+		image: Project1,
+		name: "To do list",
+		category: "UI/UX design",
+		href: "https://kikemaya.github.io/to-do-app-react-local-storage/",
+	},
+	{
+		id: "2",
+		image: Project2,
+		name: "Weather Api",
+		category: "web development",
+		href: "#",
+	},
+	{
+		id: "3",
+		image: Project3,
+		name: "Contact List",
+		category: "UI/UX design",
+		href: "#",
+	},
+	{
+		id: "4",
+		image: Project4,
+		name: "Quiz",
+		category: "branding",
+		href: "#",
+	},
+	{
+		id: "5",
+		image: Project5,
+		name: "Rock Paper Scissors",
+		category: "web development",
+		href: "#",
+	},
+	{
+		id: "6",
+		image: Project6,
+		name: "Memory Game",
+		category: "web development",
+		href: "#",
+	},
+];
 
 // skills
 export const skills = [
