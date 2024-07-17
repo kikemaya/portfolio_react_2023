@@ -14,7 +14,7 @@ import { ref, uploadBytes } from "firebase/storage";
 import { v4 } from "uuid";
 
 // FUCNTION TO GENERATE A DATETIME FORMAT
-import { getCurrentDateTime } from "../../data";
+import { getCurrentDateTime } from "../../data.jsx";
 
 // ALERT GENERATOR, EXTERNAL LIBRARY
 import Swal from "sweetalert2";

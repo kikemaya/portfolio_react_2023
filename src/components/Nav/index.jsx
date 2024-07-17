@@ -8,8 +8,6 @@ import { navigation } from "../../data";
 // import Link
 import { Link } from "react-scroll";
 
-// import { Link as LinkRouter } from "react-router-dom";
-
 const Nav = () => {
   return (
     <nav>

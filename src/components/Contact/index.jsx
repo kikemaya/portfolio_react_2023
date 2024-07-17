@@ -28,10 +28,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        process.env.REACT_APP_SERVICE,
-        process.env.REACT_APP_TEMPLATE,
+        import.meta.env.VITE_SERVICE,
+        import.meta.env.VITE_TEMPLATE,
         e.target,
-        process.env.REACT_APP_ID_E
+        import.meta.env.VITE_ID_E
       )
       .then((response) => {
         Toast.fire({
