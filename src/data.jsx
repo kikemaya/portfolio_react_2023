@@ -92,25 +92,20 @@ export const brands = [
 // projects;
 export const projectsData = [
 	{
-		id: "1",
+		id: "9b326b89-283d-47f3-a0ae-a40ca9fc0a79",
 		image: Project1,
 		name: "To do list",
-		category: "UI/UX design",
-		href: "https://kikemaya.github.io/to-do-app-react-local-storage/",
+		category: "Web development",
+		href: "https://todo-1048e.web.app/",
+		description: "My first todo list made with react and localstorage",
 	},
 	{
-		id: "2",
-		image: Project2,
-		name: "Weather Api",
-		category: "web development",
-		href: "#",
-	},
-	{
-		id: "3",
+		id: "d5155da1-9c54-45ec-993e-f9a395aa3c71",
 		image: Project3,
 		name: "Astronomy Picture of the Day",
-		category: "UI/UX design",
-		href: "https://kikemaya.github.io/nasaApiFrontProject/",
+		category: "Web development",
+		href: "https://space-app-9de4b.web.app/",
+		description: "This app gave me a job",
 	},
 ];
 

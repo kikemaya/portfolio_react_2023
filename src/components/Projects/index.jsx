@@ -39,7 +39,7 @@ const Projects = () => {
 				<ul className="flex flex-col items-center text-white md:flex-row justify-evenly" />
 			</nav>
 			{/* projects */}
-			<section className="grid gap-y-12 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-8">
+			<section className="grid gap-y-12 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-8">
 				{projects.map((item) => {
 					return (
 						<a href={item.href} key={item.id} target="_blank" rel="noreferrer">
