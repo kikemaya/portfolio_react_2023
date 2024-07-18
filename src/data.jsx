@@ -108,30 +108,9 @@ export const projectsData = [
 	{
 		id: "3",
 		image: Project3,
-		name: "Contact List",
+		name: "Astronomy Picture of the Day",
 		category: "UI/UX design",
-		href: "#",
-	},
-	{
-		id: "4",
-		image: Project4,
-		name: "Quiz",
-		category: "branding",
-		href: "#",
-	},
-	{
-		id: "5",
-		image: Project5,
-		name: "Rock Paper Scissors",
-		category: "web development",
-		href: "#",
-	},
-	{
-		id: "6",
-		image: Project6,
-		name: "Memory Game",
-		category: "web development",
-		href: "#",
+		href: "https://kikemaya.github.io/nasaApiFrontProject/",
 	},
 ];
 

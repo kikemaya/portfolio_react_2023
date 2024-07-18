@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+
+import { motion, useScroll, useTransform } from "framer-motion";
 
 // import data
 import { projectsData } from "../../data";
@@ -9,13 +11,29 @@ import Project from "./Project";
 const Projects = () => {
 	const [projects, setProjects] = useState([]);
 
+	const ref = useRef(null);
+
+	const { scrollYProgress } = useScroll({
+		target: ref,
+		offset: ["0 1", "1.33 1"],
+	});
+
+	const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.85, 1]);
+	const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
+
 	useEffect(() => {
 		// get projects based on item
 		setProjects(projectsData);
 	}, []);
 
 	return (
-		<div>
+		<motion.div
+			ref={ref}
+			style={{
+				scale: scaleProgress,
+				opacity: opacityProgress,
+			}}
+		>
 			{/* projects nav */}
 			<nav className="max-w-xl mx-auto mb-6">
 				<ul className="flex flex-col items-center text-white md:flex-row justify-evenly" />
@@ -30,7 +48,7 @@ const Projects = () => {
 					);
 				})}
 			</section>
-		</div>
+		</motion.div>
 	);
 };
 

@@ -21,7 +21,7 @@
     @apply mb-5 text-3xl font-medium lg:text-4xl lg:font-extrabold;
   }
   .subtitle {
-    @apply text-base text-paragraph mb-16 lg:mb-12 max-w-[520px];
+    @apply text-base text-paragraph lg:mb-12 max-w-[520px];
   }
   .btn {
     @apply flex items-center justify-center py-4 font-medium text-white transition-all rounded-sm px-7 hover:bg-accent-hover;
