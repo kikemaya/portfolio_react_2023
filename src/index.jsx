@@ -34,7 +34,6 @@ ReactDOM.render(
 				</Routes>
 			</BrowserRouter>
 		</AuthProvider>
-		,
 	</React.StrictMode>,
 	document.getElementById("root"),
 );
