@@ -43,16 +43,17 @@ const About = () => {
 							</p>
 							<hr className="mb-8 opacity-5" />
 							<p className="mb-8">
-								Passionate web developer dedicated to crafting beautiful and
-								functional websites. PC building enthusiast and a strong team
-								player.
-								<br />
-								<br />I enjoy spending my downtime with my family, running,
-								engaging in contact sports, and pursuing lifelong learning.
+								I am a passionate web developer dedicated to crafting beautiful
+								and functional websites. As a PC building enthusiast and a
+								strong team player, I thrive on collaboration and innovation.
 								<br />
 								<br />
-								One of my greatest strengths is public speaking. Verbal
-								expression it's a key in my life.
+								In my downtime, I love spending time with my family, running,
+								engaging in contact sports, and embracing lifelong learning.
+								<br />
+								<br />
+								Public speaking is one of my greatest strengths, as verbal
+								expression is a vital part of my life.
 								<br />
 								<br />
 								<cite>

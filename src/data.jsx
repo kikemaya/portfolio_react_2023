@@ -6,13 +6,9 @@ import AcatlanIcon from "./assets/img/brands/acatlan.png";
 import DevF from "./assets/img/brands/devf.png";
 import Epam from "./assets/img/brands/epam.svg";
 
+import Project2 from "./assets/img/projects/APOTD.png";
 // projects images
-import Project1 from "./assets/img/projects/p1.webp";
-import Project2 from "./assets/img/projects/p2.webp";
-import Project3 from "./assets/img/projects/p3.webp";
-import Project4 from "./assets/img/projects/p4.webp";
-import Project5 from "./assets/img/projects/p5.webp";
-import Project6 from "./assets/img/projects/p6.webp";
+import Project1 from "./assets/img/projects/myFirstToDoList.png";
 
 import SkillImg2 from "./assets/img/skills/css3.png";
 import SkillImg6 from "./assets/img/skills/firebase.png";
@@ -94,18 +90,20 @@ export const projectsData = [
 	{
 		id: "9b326b89-283d-47f3-a0ae-a40ca9fc0a79",
 		image: Project1,
-		name: "To do list",
-		category: "Web development",
+		name: "My First To-Do List App",
+		tools: "React | Styled Components | Local Storage",
 		href: "https://todo-1048e.web.app/",
-		description: "My first todo list made with react and localstorage",
+		description:
+			"Creating this to-do list app was a journey of passion and learning. This project marked the beginning of my love for front-end development, where each line of code was a step closer to making ideas come to life.",
 	},
 	{
 		id: "d5155da1-9c54-45ec-993e-f9a395aa3c71",
-		image: Project3,
+		image: Project2,
 		name: "Astronomy Picture of the Day",
-		category: "Web development",
+		tools: "HTML | CSS | JavaScript | API Consume",
 		href: "https://space-app-9de4b.web.app/",
-		description: "This app gave me a job",
+		description:
+			"This web app was more than just a project; it showcased my skills and landed me a teaching position at DEV.F. Here, I met incredible people and developed my teaching abilities, forging strong connections with my students.",
 	},
 ];
 

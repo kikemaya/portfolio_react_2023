@@ -24,11 +24,11 @@ const Hero = () => {
 							Hey, I am Enrique Maya! 👨🏽‍💻🙌
 						</p>
 						<h1 className="text-4xl leading-[44px] md:text-5xl md:leading-tight lg:text-5xl lg:leading-[1.2] font-bold md:tracking-[-2px] text-center lg:text-left">
-							Web Developer
+							Web Developer & Committed Educator
 						</h1>
 						<p className="pt-4 pb-8 md:pt-6 md:pb-12 max-w-[480px] text-lg text-center lg:text-left">
-							Also a very proud and happy teacher. I really enjoy connecting
-							with people and helping them. So...
+							I’m passionate about connecting with people and helping them
+							succeed. Let's create something amazing together!
 						</p>
 
 						<motion.div
@@ -43,7 +43,7 @@ const Hero = () => {
 								smooth={true}
 								duration={1500}
 							>
-								How can I help you?
+								Let's go!
 							</Link>
 						</motion.div>
 					</motion.div>

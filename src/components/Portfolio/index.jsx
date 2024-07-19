@@ -11,8 +11,9 @@ const Portfolio = () => {
 					</h2>
 
 					<p className="subtitle">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga veniam
-						labore nisium illum cupiditate reiciendis a numquam
+						These projects, though simple, symbolize key moments of growth and
+						resilience in my tech career. Each one marks a significant step in
+						my professional development.
 					</p>
 				</div>
 				<Projects />
