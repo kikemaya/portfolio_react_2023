@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "portfolio-blog-b39fa"
-  }
+    "default": "portfolio-blog-b39fa",
+    "production": "custom-square-domain"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
